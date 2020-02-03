@@ -47,7 +47,8 @@
     <!-- TODO: analisar a necessidade de polyfill em safari e outros navegadores fora da curva -->
     <div class="repositories-element" is="user-repository" username="vinigomescunha"></div>
   </div>
-  <div class="footer">Desafio Desenvolvedor Front Qconcursos.com <i href="#home" load-link class="fas fa-arrow-up"></i></div>
+  <div class="footer">Desafio Desenvolvedor Front Qconcursos.com <i href="#home" load-link class="fas fa-arrow-up"></i>
+  </div>
 </body>
 <!--templates para renderizar chamadas dinamicas no cliente-->
 <template template-loaded-profile>
@@ -73,12 +74,14 @@
       <div loaded-repository--content>{name}</div>
     </div>
     {loadedItems}
-</div>
+  </div>
 </template>
 <template template-loaded-repository-item>
   <div loaded-repository-item>
     <a loaded-repository--content href="{url}" target="_blank">{name}</a>
   </div>
 </template>
+<link rel="stylesheet" src="index.scss" />
+<script src="index.js"></script>
 
 </html>
