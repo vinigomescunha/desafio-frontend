@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <title>Desenvolvedor Front End</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="header" name="home">
+    <div class="top-header">
+      <div class="top-header--nav">
+        <span class="top-header--nav---yourname">Seu Nome</span>
+      </div>
+      <div class="top-header--nav">
+        <a href="#home" load-link class="top-header--nav---link">Home</a>
+        <a href="#sobre" load-link class="top-header--nav---link">Sobre</a>
+        <a href="#desafio" load-link class="top-header--nav---link">Desafios</a>
+      </div>
+    </div>
+    <div class="middle-header">
+      <h1>Desenvolvedor Front End</h1>
+      <h2>Desafio QConcursos.com</h2>
+    </div>
+    <div class="bottom-header">
+      <div class="bottom-header--link-icon"><i class="fab fa-facebook-square"></i></div>
+      <div class="bottom-header--link-icon"><i class="fab fa-linkedin"></i></div>
+      <div class="bottom-header--link-icon"><i class="fab fa-github-square"></i></div>
+    </div>
+  </div>
+  <div class="about" name="sobre">
+    <h2>Sobre</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis egestas eros eu dignissim. Nulla
+      facilisi. Cras eros sapien, faucibus eget turpis et, fermentum semper nisi. Suspendisse potenti. Integer non est a
+      sapien sagittis porta. Aenean a magna condimentum, aliquet eros non, pretium arcu. Integer sit amet neque nibh. In
+      molestie consectetur justo, ut blandit sem.</p>
+    <p>Fusce a pulvinar mi. Curabitur non ex est. Duis eleifend pulvinar ipsum eu molestie. Phasellus pretium venenatis
+      ante sit amet vulputate. Mauris luctus hendrerit nisl, et egestas velit lobortis vitae. Quisque ultricies felis in
+      ligula luctus semper vel quis quam. Nullam turpis nibh, iaculis ac faucibus ut, ornare eu magna. Integer suscipit
+      id metus hendrerit rutrum. Pellentesque convallis sagittis mi, ac porttitor eros sagittis a. Aenean condimentum
+      ligula lacus, at tempor elit iaculis at. Phasellus posuere augue a orci pulvinar, vitae feugiat massa lacinia.
+      Donec sit amet maximus dolor, id dapibus felis. Donec sed cursus elit. Vivamus ac urna ex. Quisque placerat
+      suscipit metus quis pretium.</p>
+  </div>
+  <div class="repositories" name="desafio">
+    <h2>Desafio</h2>
+    <!-- TODO: analisar a necessidade de polyfill em safari e outros navegadores fora da curva -->
+    <div class="repositories-element" is="user-repository" username="vinigomescunha"></div>
+  </div>
+  <div class="footer">Desafio Desenvolvedor Front Qconcursos.com <i href="#home" load-link class="fas fa-arrow-up"></i></div>
+</body>
+<!--templates para renderizar chamadas dinamicas no cliente-->
+<template template-loaded-profile>
+  <div loaded-profile>
+    <div loaded-profile-1st>
+      <img loaded-profile--img src='{avatar}'>
+      <div style="text-align:center;">
+        <a loaded-profile--content href="{url}" target="_blank">VISITAR PERFIL</a>
+      </div>
+    </div>
+    <div loaded-profile-2st>
+      <span loaded-profile--content><b>REPOSITÓRIOS: {repositorios}</b></span>
+      <span loaded-profile--content><b>SEGUIDORES: {seguidores}</b></span>
+      <span loaded-profile--content><b>SEGUINDO: {seguindo}</b></span>
+      <span loaded-profile--action-buttons>
+        <button loaded-profile--button load-repository>Ver Repositórios</button>
+        <button loaded-profile--button load-favorite>Ver Favoritos</button>
+    </div>
+</template>
+<template template-loaded-repository>
+  <div loaded-repository>
+    <div loaded-repository-name>
+      <div loaded-repository--content>{name}</div>
+    </div>
+    {loadedItems}
+</div>
+</template>
+<template template-loaded-repository-item>
+  <div loaded-repository-item>
+    <a loaded-repository--content href="{url}" target="_blank">{name}</a>
+  </div>
+</template>
+
+</html>
